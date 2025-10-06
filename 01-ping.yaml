@@ -1,0 +1,9 @@
+# in ansible everything is considered as list only
+# and that list is stated with -
+
+- name: ping the response
+  host: web
+  tasks: # list of tasks/modules/collections
+  - name: pining the server 
+    ansible.builtin.ping:
+
