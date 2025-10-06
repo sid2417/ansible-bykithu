@@ -2,7 +2,7 @@
 # and that list is stated with -
 
 - name: ping the response
-  host: web
+  hosts: web
   become: yes
   tasks: # list of tasks/modules/collections
   - name: pining the server 
