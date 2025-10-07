@@ -6,3 +6,5 @@
     ansible.builtin.command: id kithu
     ignore_errors: true
     register: USER
+    ansible.builtin.debug:
+     msg: "this is information about user :: {{USER}}"
