@@ -2,15 +2,18 @@
   hosts: localhost
   become: yes
   tasks:
-  - name: user checking using conditions
+  - name: user checking using condition
     ansible.builtin.command: id Kithu
-    #register: USER
-    ignore_errors: true
+    register: USER  ## this register key word is holding the result and keep it in variable like example in shell variable=$(id -u)
+    ignore_errors: true  ## this ignore_errors is ignoring the error
   
-  # - name: writing the condition
-  #   ansible.builtin.command: 
-
-
+  - name: printing the user information
+    ansible.builtin.debug:
+     msg: "this is the information about user :: {{USER}}"
+  
+  - name: writing the condition
+    ansible.builtin.command: useradd Kithu
+    when: USER.rc != 0   ## here when is the condition
 
   - name: checking code is success or not
     ansible.builtin.debug:
