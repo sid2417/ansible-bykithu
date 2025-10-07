@@ -4,7 +4,14 @@
   tasks:
   - name: user checking using conditions
     ansible.builtin.command: id Kithu
+    #register: USER
+    ignore_errors: true
   
+  # - name: writing the condition
+  #   ansible.builtin.command: 
+
+
+
   - name: checking code is success or not
     ansible.builtin.debug:
      msg: "hi, code is running successfully..."
