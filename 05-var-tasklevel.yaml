@@ -1,0 +1,9 @@
+- name: printing variables in task level
+  hosts: localhost
+  tasks:
+  - name: task level variables
+    vars:
+     person: Kith
+     job: Graphic_Designer
+    ansible.builtin.debug:
+     msg: "My name is {{person}}, I am working as a {{job}}"
