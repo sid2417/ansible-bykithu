@@ -3,8 +3,7 @@
   vars:
   - Person: Kithu
     Job: Graphic Designer
-
   tasks:
   - name: printing variables 
     ansible.builtin.debug:
-      msg: "Hi floks, My name is Kithu, I am working as Graphic Designer.. "
+      msg: "Hi floks, My name is {{Person}}, I am working as {{Job}}.. "
