@@ -1,8 +1,8 @@
 - name: printing variables paly level
   hosts: localhost
   vars:
-  - Person: Kithu
-    Job: Graphic Designer
+  - Person: Siddhu
+    Job: Devops Engineer
   tasks:
   - name: printing variables 
     ansible.builtin.debug:
