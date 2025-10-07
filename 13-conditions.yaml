@@ -1,0 +1,8 @@
+- name: this is about user exist or not
+  hosts: localhost
+  become: true
+  tasks:
+  - name: user checking
+    ansible.builtin.command: id kithu
+    ignore_errors: true
+    register: USER
