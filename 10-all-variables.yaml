@@ -1,0 +1,21 @@
+- name: printing variables which is first preference
+  hosts: localhost
+  vars_files:
+  - keep-variables.yaml
+  vars_args:
+  - name: USERNAME
+    prompt: "Please enter username"
+    private: false
+  - name: PASSWORD
+    prompt: "Please enter password"
+    private: true
+  vars:
+   person: kithu
+   job: playlevel
+  tasks:
+  - name: printing variables
+    vars:
+     person: Kithu
+     job: tasklevel
+    ansible.builtin.debug:
+     msg: "My name is {{person}}, i am working as a {{job}}...."
