@@ -3,10 +3,10 @@
   # vars_files:
   # - keep-variables.yaml
   vars_prompt:
-  - name: PERSON
+  - name: person
     prompt: "Please enter username"
     private: false
-  - name: JOB
+  - name: job
     prompt: "Please enter password"
     private: true
   vars:
