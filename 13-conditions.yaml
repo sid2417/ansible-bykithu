@@ -10,3 +10,11 @@
   - name: printing the user information
     ansible.builtin.debug:
      msg: "this is information about user :: {{USER}}"
+    
+  - name: write condition to create user
+    ansible.builtin.command: useradd kithu
+    when: USER.rc != 0
+
+  - name: printing successfull statement
+    ansible.builtin.debug:
+     msg: "The user is created successfully..."
