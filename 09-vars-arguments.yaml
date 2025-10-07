@@ -1,0 +1,6 @@
+- name: printing variables through passing arguments
+  hosts: localhost
+  tasks:
+  - name: priting variables 
+    ansible.builtin.service:
+     msg: "my name is {{person}}, i am working as a {{job}}..."
