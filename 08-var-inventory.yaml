@@ -1,0 +1,6 @@
+- name: printing variables through inventory
+  hosts: localhost
+  tasks:
+  - name: printing variables
+    ansible.builtin.debug:
+     msg: "My name is {{person}}, I am working as a {{job}}"
