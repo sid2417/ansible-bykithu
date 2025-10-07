@@ -2,7 +2,7 @@
   hosts: localhost
   vars_files:
   - keep-variables.yaml
-  vars_args:
+  vars_prompt:
   - name: USERNAME
     prompt: "Please enter username"
     private: false
@@ -19,3 +19,7 @@
      job: tasklevel
     ansible.builtin.debug:
      msg: "My name is {{person}}, i am working as a {{job}}...."
+
+
+# 1st Arguments 
+# 2nd 
