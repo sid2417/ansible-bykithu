@@ -2,5 +2,5 @@
   hosts: localhost
   tasks:
   - name: priting variables 
-    ansible.builtin.service:
+    ansible.builtin.debug:
      msg: "my name is {{person}}, i am working as a {{job}}..."
