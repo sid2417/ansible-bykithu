@@ -3,15 +3,15 @@
   # vars_files:
   # - keep-variables.yaml
   vars_prompt:
-  - name: USERNAME
+  - name: PERSON
     prompt: "Please enter username"
     private: false
-  - name: PASSWORD
+  - name: JOB
     prompt: "Please enter password"
     private: true
-  # vars:
-  #  person: kithu
-  #  job: playlevel
+  vars:
+   person: kithu
+   job: playlevel
   tasks:
   - name: printing variables
     # vars:
@@ -25,4 +25,4 @@
 # 2nd Task Level
 # 3rd vars_files
 # 4rth Play level
-# 5th 
+# 5th  inventory 
