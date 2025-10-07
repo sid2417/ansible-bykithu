@@ -4,6 +4,9 @@
   - name: play1 task1
     ansible.builtin.debug:
       msg: "This is from task1 and play 1"
+  - name: play1 task2
+    ansible.builtin.debug:
+      msg: "This is from task2 and play 1"
 
 
 - name: play2
@@ -12,5 +15,13 @@
   - name: paly2 task1
     ansible.builtin.debug:
       msg: "This is from play 2 task 1"
+
+
+- name: Play3
+  hosts: localhost
+  tasks:
+  - name: task1
+    ansible.builtin.debug:
+      msg: "This is from play3 from task 1"
 
       
