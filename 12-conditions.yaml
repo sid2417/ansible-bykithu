@@ -1,0 +1,10 @@
+- name: printing variable using conditions
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: user checking using conditions
+    ansible.builtin.command: id Kithu
+  
+  - name: checking code is success or not
+    ansible.builtin.debug:
+     msg: "hi, code is running successfully..."
