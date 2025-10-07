@@ -9,9 +9,9 @@
   - name: PASSWORD
     prompt: "Please enter password"
     private: true
-  vars:
-   person: kithu
-   job: playlevel
+  # vars:
+  #  person: kithu
+  #  job: playlevel
   tasks:
   - name: printing variables
     # vars:
