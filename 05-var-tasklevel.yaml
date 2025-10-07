@@ -3,7 +3,7 @@
   tasks:
   - name: task level variables
     vars:
-     person: Kith
-     job: Graphic_Designer
+     person: Sid
+     job: Devops_Engg
     ansible.builtin.debug:
      msg: "My name is {{person}}, I am working as a {{job}}"
