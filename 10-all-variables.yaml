@@ -1,7 +1,7 @@
 - name: printing variables which is first preference
   hosts: localhost
-  # vars_files:
-  # - keep-variables.yaml
+  vars_files:
+  - keep-variables.yaml
   vars_prompt:
   - name: person
     prompt: "Please enter username"
@@ -24,5 +24,7 @@
 # 1st Arguments 
 # 2nd Task Level
 # 3rd vars_files
-# 4rth Play level
-# 5th  inventory 
+# 4rth Prompt 
+# 5th Play level
+# 6th inventory 
+# 7th Role
