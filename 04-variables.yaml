@@ -1,9 +1,9 @@
 - name: printing variables paly level
   hosts: localhost
   vars:
-   person: Kith # va
+   person: Sid # va
    job: Devops Engineer
   tasks:
   - name: printing variables 
     ansible.builtin.debug:
-      msg: "Hi floks, My name is {{person}}, I am working as {{job}}.. "
+     msg: "Hi floks, My name is {{person}}, I am working as {{job}}.. "
