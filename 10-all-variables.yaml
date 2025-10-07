@@ -14,12 +14,13 @@
    job: playlevel
   tasks:
   - name: printing variables
-    vars:
-     person: Kithu
-     job: tasklevel
+    # vars:
+    #  person: Kithu
+    #  job: tasklevel
     ansible.builtin.debug:
      msg: "My name is {{person}}, i am working as a {{job}}...."
 
 
 # 1st Arguments 
-# 2nd 
+# 2nd Task Level
+# 3rd 
