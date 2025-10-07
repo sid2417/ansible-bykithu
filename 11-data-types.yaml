@@ -1,0 +1,18 @@
+- name: printing data types
+  hosts: localhost
+  become: yes
+  vars:
+   person: kithu # this is string
+   tools: # this ( - ) is indicates list
+   - shell
+   - terraform
+   - ansible
+   experience: # this is map   ## below those are key value pair 
+    devops: 3 
+    aws: 2
+    admin: 1
+   realproject: true
+  tasks:
+  - name: printing variables
+    ansible.builtin.debug:
+     msg: "This is {{person}}, i am working in different tools are : {{tools}}, and i have an experience : {{experience}}, working in realtime project : {{realproject}}"
