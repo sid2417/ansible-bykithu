@@ -6,9 +6,14 @@
     prompt: plese enter your number
     private: false
   vars:
-    name: "kithu"
+    name: "Kithu"
     job: "graphic designer"
+    hobby: "PHOTOGRAPHY"
   tasks:
   - name: variables printing lower to upper case
     ansible.builtin.debug:
       msg: "{{ name | upper }} and {{ job | upper }}"
+  
+  - name: variables printing upper to lower case
+    ansible.builtin.debug:
+      msg: "{{ name | lower }} and {{ hobby | lower }}"
