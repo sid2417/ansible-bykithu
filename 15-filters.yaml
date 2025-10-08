@@ -29,8 +29,17 @@
   hosts: localhost
   become: yes
   vars:
-  - number: {10,20,20.30,30,40,50,50}
+    number: [10,20,20,30,30,40,50,50]
   tasks:
   - name: Before removing duplicates in the list
     ansible.builtin.debug:
       msg: "{{ number }}"
+
+  - name: removing duplicates in the list ## here key word is unique
+    ansible.builtin.debug:
+      number_unique: "{{ number | unique }}" ## _unique is storeing the values we can use it later
+      ##   msg: "{{ number | unique }}"  ## msg only priting it is not holding 
+  
+  - name: after removing duplicates in the list
+    ansible.builtin.debug:
+      msg: "{{ number | unique }}"
