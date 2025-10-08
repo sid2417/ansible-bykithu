@@ -11,4 +11,4 @@
   tasks:
   - name: variables printing lower to upper case
     ansible.builtin.debug:
-      msg: "{{name | upper }}"
+      msg: "{{name | upper  and job | upper }}"
