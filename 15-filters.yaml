@@ -58,4 +58,22 @@
       msg: "Before converting list :: {{person_details}}"
   - name: After converting list to map
     ansible.builtin.debug:
-      msg: "After converting :: {{ person_details | dict2items }}"
+      msg: "After converting :: {{ person_details | dict2items }}" ##  dict2items
+
+
+- name: now we are convert list/items To map/dictionery/key-value pair
+  hosts: localhost
+  become: yes
+  vars:
+  - person_info: [
+        {'key': 'name', 'value': 'kithu'},
+        {'key': 'job', 'value': 'graphic designer'},
+        {'key': 'hobby', 'value': 'photography'}
+      ]
+  tasks:
+  - name: Before converting list to map
+    ansible.builtin.debug:
+      msg: "Before converting list : {{ person_info }}"
+  - name: after converting list to map
+    ansible.builtin.debug:
+      msg: "After converting list to map : {{ person_info | items2dict }}"  ### items2dict
