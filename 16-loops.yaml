@@ -1,0 +1,11 @@
+- name: printing message using loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: message printing 
+    ansible.builtin.debug:
+      msg: "Hi, my name is {{ item }}"  ## item is a key work to print loops
+    loops:
+    - kithu
+    - sid
+    - happy
