@@ -3,7 +3,7 @@
   vars_prompt:
   - name: USERNAME
     prompt: "Please Enter your username"
-    private: false
+    private: false ## false = visible the content  ##  true = hidding the content
   - name: PASSWORD
     prompt: "Please Enter your password"
     private: true
