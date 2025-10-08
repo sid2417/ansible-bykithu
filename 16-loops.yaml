@@ -5,7 +5,7 @@
   - name: message printing 
     ansible.builtin.debug:
       msg: "Hi, my name is {{ item }}"  ## item is a key work to print loops
-    loops:
+    loop:
     - kithu
     - sid
     - happy
