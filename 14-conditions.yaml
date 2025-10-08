@@ -8,11 +8,11 @@
   tasks: 
   - name: checking number
     ansible.builtin.debug:
-      msg: "The entered value is : {{number}} less than 10 " 
+      msg: "The entered value is : {{number}} , it is less than 10 " 
     when: number | int < 10
 
   - name: checking number
     ansible.builtin.debug:
-      msg: "The entered value is : {{number}} greater than 10 "
+      msg: "The entered value is : {{number}}. it is greater than 10 "
     when: number | int > 10
     
