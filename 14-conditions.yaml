@@ -1,7 +1,7 @@
 - name: printing number using prompt whether it is greater than or less than
   hosts: localhost
   become: yes
-  vars_promt:
+  vars_prompt:
   - name: number
     prompt: Please Enter Your number
     private: false
