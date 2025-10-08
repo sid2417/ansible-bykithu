@@ -9,7 +9,14 @@
     name: "Kithu"
     job: "graphic designer"
     hobby: "PHOTOGRAPHY"
+  vars:
+  - 
   tasks:
+  - name: print default value
+    ansible.builtin.debug:
+      msg: "Hello {{course | default('Ansible') }}" ## here we doesn't metnion the course variable
+      ## default is the keyword if you are not decalred any variable it is printing default value 
+
   - name: variables printing lower to upper case
     ansible.builtin.debug:
       msg: "{{ name | upper }} and {{ job | upper }}"
@@ -17,3 +24,13 @@
   - name: variables printing upper to lower case
     ansible.builtin.debug:
       msg: "{{ name | lower }} and {{ hobby | lower }}"
+
+- name: remoging duplicates
+  hosts: localhost
+  become: yes
+  vars:
+  - number: {10,20,20.30,30,40,50,50}
+  tasks:
+  - name: Before removing duplicates in the list
+    ansible.builtin.debug:
+      msg: "{{number}}"
