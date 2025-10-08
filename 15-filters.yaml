@@ -9,8 +9,7 @@
     name: "Kithu"
     job: "graphic designer"
     hobby: "PHOTOGRAPHY"
-  vars:
-  - 
+  
   tasks:
   - name: print default value
     ansible.builtin.debug:
