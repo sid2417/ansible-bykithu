@@ -4,8 +4,8 @@
   tasks:
   - name: message printing 
     ansible.builtin.debug:
-      msg: "Hi, my name is {{ item }}"  ## item is a key work to print loops
-    loop:
+      msg: "Hi, my name is {{ item }}"  ## item is a key word to print loop
+    loop:  ## loop
     - kithu
     - sid
     - happy
