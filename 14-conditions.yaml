@@ -2,7 +2,7 @@
   hosts: localhost
   become: yes
   vars_promt:
-    name: number
+  - name: number
     prompt: Please Enter Your number
     private: false
   tasks: 
