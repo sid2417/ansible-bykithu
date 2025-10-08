@@ -4,8 +4,8 @@
   tasks:
   - name: installing and removing based on the preference
     ansible.builtin.dnf:
-      name: {{ item.name }} ## item 
-      state: {{ item.state }}
+      name: "{{ item.name }}" ## item 
+      state: "{{ item.state }}"
     loop:
     - { name: nginx,  state: latest }
     - { name: postfix, state: absent }
