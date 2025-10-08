@@ -87,4 +87,4 @@
   tasks:
   - name: printing max and min 
     ansible.builtin.debug:
-      msg: "{{ list_of_numbers | min }}  and {{ list_of_numbers | max }}"
+      msg: " minimum numbers is :: {{ list_of_numbers | min }}  and  maximum number is :: {{ list_of_numbers | max }}"
