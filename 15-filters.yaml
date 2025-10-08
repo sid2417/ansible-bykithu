@@ -36,7 +36,7 @@
       msg: "{{ number }}"
 
   - name: removing duplicates in the list ## here key word is unique
-    ansible.builtin.debug:
+    ansible.builtin.set_fact:
       number_unique: "{{ number | unique }}" ## _unique is storeing the values we can use it later
       ##   msg: "{{ number | unique }}"  ## msg only priting it is not holding 
   
