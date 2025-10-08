@@ -35,10 +35,27 @@
       msg: "{{ number }}"
 
   - name: removing duplicates in the list ## here key word is unique
-    ansible.builtin.set_fact:
+    ansible.builtin.set_fact:  ## set_fact
       number_unique: "{{ number | unique }}" ## _unique is storeing the values we can use it later
       ##   msg: "{{ number | unique }}"  ## msg only priting it is not holding 
   
   - name: after removing duplicates in the list
     ansible.builtin.debug:
       msg: "{{ number | unique }}"
+
+
+- name: now we are convert map/dictionery/key-value pair To list/items
+  hosts: localhost
+  become: yes
+  vars:
+    person_details:
+      name: kithu
+      job: graphic designer
+      hobby: photography
+  tasks:
+  - name: before converting list
+    ansible.builtin.debug:
+      msg: "Before converting list :: {{person_details}}"
+  - name: After converting list to map
+    ansible.builtin.debug:
+      msg: "After converting :: {{ person_details | dict2items }}"
