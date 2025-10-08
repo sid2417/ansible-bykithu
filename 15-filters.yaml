@@ -33,4 +33,4 @@
   tasks:
   - name: Before removing duplicates in the list
     ansible.builtin.debug:
-      msg: "{{number}}"
+      msg: "{{ number }}"
