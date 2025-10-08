@@ -1,0 +1,19 @@
+- name: installation in web
+  hosts: web
+  become: yes
+  tasks:
+  - name: installing and removing based on the preference
+    ansible.builtin.dnf:
+      name: {{ item.name }}
+      state: {{ item.state }}
+    loop:
+    - { name: nginx,  state: present }
+    - { name: postfix, state: absent }
+    - { name: mysql, state: absent }
+
+    ### this below code also correct
+  #   loop:
+  # - name: nginx
+  #   state: present
+  # - name: git
+  #   state: latest
